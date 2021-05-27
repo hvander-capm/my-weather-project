@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Wireframe</title>
+    <link rel="stylesheet" href="css/weather.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Source+Serif+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="weatherApp">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input
+            type="City/State"
+            id="inputLocation"
+            class="form-control"
+            aria-describedby="locationHelpBlock"
+            placeholder="Enter City/State then select Search"
+          />
+          <br />
+          <span class="btn" id="searchBtn">
+            <input type="Submit" value="Search"
+          /></span>
+          <span class="btn" id="currentBtn">
+            <input type="Submit" value="Current"
+          /></span>
+        </div>
+        <div class="row currentDay">
+          <div class="col currentInfo">
+            <div id="currentLocation">New York</div>
+            <div id="currentTime">Sunday, 12:00pm</div>
+            <div id="currentCondition">Sunny</div>
+            <span class="temperature" id="temperature">76</span>
+            <span class="units">
+              <a href="#" id="fahrenheit-link">℉</a>
+              |
+              <a href="#" id="celsius-link">℃</a>
+            </span>
+          </div>
+          <div class="col-6 addtInfo">
+            Precipitation: <span id="precipitation"> 0%</span>
+            <br />
+            Wind: <span id="wind"> 7mph</span>
+            <br />
+            Humidity: <span id="humidity"> 86%</span>
+          </div>
+        </div>
+      </div>
+      <div class="row fiveDays">
+        <div class="col">
+          <div class="emojis">🌞</div>
+          Tuesday
+          <br />
+          Sunny, 75℉
+        </div>
+        <div class="col">
+          <div class="emojis">🌧</div>
+          Wednesday
+          <br />
+          Rainy, 60℉
+        </div>
+        <div class="col">
+          <div class="emojis">☁</div>
+          Thursday
+          <br />
+          Cloudy, 65℉
+        </div>
+        <div class="col">
+          <div class="emojis">🌞</div>
+          Friday
+          <br />
+          Sunny, 73℉
+        </div>
+        <div class="col">
+          <div class="emojis">⛅</div>
+          Saturday
+          <br />
+          Partly Cloudy, 70℉
+        </div>
+      </div>
+    </div>
+    <script src="js/unicorn.js"></script>
+  </body>
+</html>
