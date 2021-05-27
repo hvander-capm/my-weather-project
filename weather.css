@@ -5,6 +5,7 @@ body {
   font-family: "Source Serif Pro", serif;
   margin-block-start: 0;
   margin-block-end: 0;
+  text-align: center;
 }
 .weatherApp {
   border: 5px solid aquamarine;
