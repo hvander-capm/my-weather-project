@@ -28,7 +28,7 @@
   background-color: #ffff;
   cursor: pointer;
   transition: 250ms ease-in;
-  width: 250px;
+  width: 150px;
 }
 .btn :hover {
   background-color: aquamarine;
