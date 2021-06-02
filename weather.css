@@ -37,12 +37,13 @@
   text-align: left;
   text-transform: capitalize;
   font-size: 20px;
-  min-width: 500px;
+  min-width: 700px;
   padding: 20px;
 }
 .currentIcon {
   text-align: center;
   font-size: 50px;
+  max-width: fit-content;
 }
 .addtInfo {
   text-align: right;
