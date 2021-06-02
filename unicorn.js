@@ -31,21 +31,15 @@ function locationTemp(response) {
   let locTemp = Math.round(response.data.main.temp);
   let locCity = response.data.name;
   let locCond = response.data.weather[0].description;
-  let locIcon = response.data.weather[0].icon;
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
-  let locIcon = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
   locCondition.innerHTML = `${locCond}`;
-  locIcon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${locIcon}@2x.png`
-  );
 }
 
 function showLocTemperature(position) {
@@ -67,13 +61,11 @@ function currentTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let condition = response.data.weather[0].description;
-  let icon = response.data.weather[0].icon;
   let currentLocation = document.querySelector("#currentLocation");
   let currentTemperature = document.querySelector("#temperature");
   let currentCondition = document.querySelector("#currentCondition");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
-  let currenticon = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
@@ -82,10 +74,6 @@ function currentTemp(response) {
   currentCondition.innerHTML = `${condition}`;
   currentHumidity.innerHTML = `${humid}%`;
   currentWind.innerHTML = `${wind}mph`;
-  currenticon.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${icon}@2x.png`
-  );
 }
 
 function showTemperature(position) {
