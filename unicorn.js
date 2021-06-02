@@ -26,7 +26,7 @@ function localTime() {
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
-//Challenge 3
+//Different Temp links
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
@@ -112,5 +112,3 @@ function getCurrentPosition() {
 
 let button = document.querySelector("#currentBtn");
 button.addEventListener("click", getCurrentPosition);
-
-let fahrenheittemp = null;
