@@ -30,8 +30,8 @@ crtTime.innerHTML = localTime();
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
-
-  tempF.innerHTML = fahrenheittemp;
+  let fahrenheitTemp = fehrenheittemp;
+  tempF.innerHTML = fahrenheitTemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
 alternateTempF.addEventListener("click", changeTempF);
@@ -112,4 +112,4 @@ function getCurrentPosition() {
 let button = document.querySelector("#currentBtn");
 button.addEventListener("click", getCurrentPosition);
 
-let fahrenheittemp = response.data.main.temp;
+let fahrenheittemp = null;
