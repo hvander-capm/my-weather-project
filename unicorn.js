@@ -30,16 +30,16 @@ crtTime.innerHTML = localTime();
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
+  let fahrenheittemp = event.data.main.temp;
   tempF.innerHTML = fahrenheittemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
 alternateTempF.addEventListener("click", changeTempF);
 
-let fahrenheittemp = data.main.temp;
-
 function changeTempC(event) {
   event.preventDefault();
   let tempC = document.querySelector("#temperature");
+  let fahrenheittemp = event.data.main.temp;
   let celsiustemp = Math.round(((fahrenheittemp - 32) * 5) / 9);
 
   tempC.innerHTML = celsiustemp;
@@ -56,8 +56,6 @@ function locationTemp(response) {
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
   let locIcon = document.querySelector("#icon");
-
-  fahrenheittemp = response.data.main.temp;
 
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
