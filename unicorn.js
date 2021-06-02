@@ -3,6 +3,9 @@ function localTime() {
   let now = new Date();
   let dayData = now.getDay();
   let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -28,7 +31,7 @@ function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
 
-  tempF.innerHTML = "80";
+  tempF.innerHTML = fahrenheittemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
 alternateTempF.addEventListener("click", changeTempF);
@@ -36,23 +39,31 @@ alternateTempF.addEventListener("click", changeTempF);
 function changeTempC(event) {
   event.preventDefault();
   let tempC = document.querySelector("#temperature");
+  let celsiustemp = ((fahrenheittemp - 32) * 5) / 9;
 
-  tempC.innerHTML = "17";
+  tempC.innerHTML = celsiustemp;
 }
 let alternateTempC = document.querySelector("#celsius-link");
 alternateTempC.addEventListener("click", changeTempC);
 
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
+  fahrenheittemp = Math.round(response.data.main.temp);
+
   let locTemp = Math.round(response.data.main.temp);
   let locCity = response.data.name;
   let locCond = response.data.weather[0].description;
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
+  let locIcon = document.querySelector("#icon");
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
   locCondition.innerHTML = `${locCond}`;
+  locIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showLocTemperature(position) {
@@ -100,3 +111,5 @@ function getCurrentPosition() {
 
 let button = document.querySelector("#currentBtn");
 button.addEventListener("click", getCurrentPosition);
+
+let fahrenheittemp = null;
