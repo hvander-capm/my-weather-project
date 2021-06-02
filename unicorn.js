@@ -48,7 +48,7 @@ alternateTempC.addEventListener("click", changeTempC);
 
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
-  fahrenheittemp = Math.round(response.data.main.temp);
+  fahrenheittemp = response.data.main.temp;
 
   let locTemp = Math.round(response.data.main.temp);
   let locCity = response.data.name;
