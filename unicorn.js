@@ -112,4 +112,4 @@ function getCurrentPosition() {
 let button = document.querySelector("#currentBtn");
 button.addEventListener("click", getCurrentPosition);
 
-let fahrenheittemp = null;
+let fahrenheittemp = response.data.main.temp;
