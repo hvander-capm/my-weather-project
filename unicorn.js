@@ -100,7 +100,7 @@ button.addEventListener("click", getCurrentPosition);
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
-  tempF.innerHTML = fahrenheittemp;
+  tempF.innerHTML = Math.round(fahrenheittemp);
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
 alternateTempF.addEventListener("click", changeTempF);
