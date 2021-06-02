@@ -31,7 +31,7 @@ function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
 
-  tempF.innerHTML = Math.round(response.data.main.temp);
+  tempF.innerHTML = fahrenheittemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
 alternateTempF.addEventListener("click", changeTempF);
@@ -39,7 +39,7 @@ alternateTempF.addEventListener("click", changeTempF);
 function changeTempC(event) {
   event.preventDefault();
   let tempC = document.querySelector("#temperature");
-  let celsiustemp = ((fahrenheittemp - 32) * 5) / 9;
+  let celsiustemp = Math.round(((fahrenheittemp - 32) * 5) / 9);
 
   tempC.innerHTML = celsiustemp;
 }
