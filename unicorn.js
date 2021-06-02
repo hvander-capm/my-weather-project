@@ -30,7 +30,6 @@ crtTime.innerHTML = localTime();
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
-  let fahrenheittemp = event.data.main.temp;
   tempF.innerHTML = fahrenheittemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
@@ -39,13 +38,14 @@ alternateTempF.addEventListener("click", changeTempF);
 function changeTempC(event) {
   event.preventDefault();
   let tempC = document.querySelector("#temperature");
-  let fahrenheittemp = event.data.main.temp;
   let celsiustemp = Math.round(((fahrenheittemp - 32) * 5) / 9);
 
   tempC.innerHTML = celsiustemp;
 }
 let alternateTempC = document.querySelector("#celsius-link");
 alternateTempC.addEventListener("click", changeTempC);
+
+let fahrenheittemp = null;
 
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
@@ -56,6 +56,8 @@ function locationTemp(response) {
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
   let locIcon = document.querySelector("#icon");
+
+  fahrenheittemp = response.data.main.temp;
 
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
@@ -90,6 +92,9 @@ function currentTemp(response) {
   let currentCondition = document.querySelector("#currentCondition");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
+
+  fahrenheittemp = response.data.main.temp;
+
   currentLocation.innerHTML = `${city}`;
   currentTemperature.innerHTML = `${temp}`;
   currentCondition.innerHTML = `${condition}`;
