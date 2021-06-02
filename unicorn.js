@@ -30,6 +30,7 @@ crtTime.innerHTML = localTime();
 function changeTempF(event) {
   event.preventDefault();
   let tempF = document.querySelector("#temperature");
+  let fahrenheittemp = event.data.main.temp;
   tempF.innerHTML = fahrenheittemp;
 }
 let alternateTempF = document.querySelector("#fahrenheit-link");
