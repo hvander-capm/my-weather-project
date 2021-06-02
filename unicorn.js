@@ -36,7 +36,7 @@ function locationTemp(response) {
   let locCondition = document.querySelector("#currentCondition");
   let locIcon = document.querySelector("#icon");
 
-  fahrenheittemp = response.data.main.temp;
+  fahrenheittemp = Math.round(response.data.main.temp);
 
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
@@ -72,7 +72,7 @@ function currentTemp(response) {
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
 
-  fahrenheittemp = response.data.main.temp;
+  fahrenheittemp = Math.round(response.data.main.temp);
 
   currentLocation.innerHTML = `${city}`;
   currentTemperature.innerHTML = `${temp}`;
