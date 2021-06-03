@@ -1,19 +1,17 @@
 .container {
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
   font-family: "Source Serif Pro", serif;
   margin-block-start: 0;
   margin-block-end: 0;
   text-align: center;
+  padding: 45px;
 }
 .weatherApp {
-  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
   border: 5px solid aquamarine;
   border-radius: 2px;
   box-shadow: 9px 9px 5px rgba(209, 206, 206, 0.664);
-  padding: 40px;
-  margin-block-start: 25px;
-  margin-left: 90px;
-  margin-right: 90px;
-  margin-block-end: 25px;
+  max-width: 800px;
+  margin: 60px auto;
 }
 .fiveDays {
   text-align: center;
