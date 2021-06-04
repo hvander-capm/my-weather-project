@@ -7,6 +7,10 @@
   padding: 45px;
   margin: auto;
 }
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
 .weatherApp {
   border: 5px solid aquamarine;
   border-radius: 2px;
