@@ -31,6 +31,9 @@
 .btn :hover {
   background-color: aquamarine;
 }
+.row {
+  margin: auto;
+}
 .currentDay {
   text-align: left;
   text-transform: capitalize;
@@ -46,7 +49,7 @@
 }
 .addtInfo {
   text-align: right;
-  min-width: 200px;
+  max-width: 200px;
 }
 .form-text {
   font-style: italic;
