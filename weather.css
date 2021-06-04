@@ -34,7 +34,6 @@
 }
 
 .currentDay {
-  text-align: left;
   text-transform: capitalize;
   font-size: 20px;
   min-width: 700px;
@@ -44,7 +43,10 @@
 .currentIcon {
   text-align: center;
   font-size: 50px;
-  max-width: fit-content;
+}
+.currentInfo {
+  text-align: left;
+  max-width: 200px;
 }
 .addtInfo {
   text-align: right;
