@@ -1,3 +1,6 @@
+.row {
+  margin: auto;
+}
 .container {
   background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
   font-family: "Source Serif Pro", serif;
@@ -32,9 +35,7 @@
 .btn :hover {
   background-color: aquamarine;
 }
-.row {
-  margin: auto;
-}
+
 .currentDay {
   text-align: left;
   text-transform: capitalize;
