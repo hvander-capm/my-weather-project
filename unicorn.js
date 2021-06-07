@@ -51,7 +51,7 @@ function locationTemp(response) {
   locWinds.innerHTML = `${locWind}mph`;
   locHumidity.innerHTML = `${locHumid}%`;
   locPrecipitation.innerHTML = `${locPrecip}`;
-  locImage.innerHTML = `${locIcon}`;
+  locImage.innerHTML = `src="https://ssl.gstatic.com/onebox/weather/64/${locIcon}.png`;
 }
 
 function showLocTemperature(position) {
