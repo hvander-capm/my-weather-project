@@ -51,7 +51,9 @@ function locationTemp(response) {
   locWinds.innerHTML = `${locWind}mph`;
   locHumidity.innerHTML = `${locHumid}%`;
   locPrecipitation.innerHTML = `${locPrecip}`;
-  locImage.innerHTML = `src="https://ssl.gstatic.com/onebox/weather/64/${locIcon}.png`;
+  locImage.setAttribute =
+    ("src", `https://ssl.gstatic.com/onebox/weather/64/${locIcon}.png`);
+  locImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
 function showLocTemperature(position) {
@@ -91,7 +93,9 @@ function currentTemp(response) {
   currentHumidity.innerHTML = `${humid}%`;
   currentWind.innerHTML = `${wind}mph`;
   currentPrecipitation.innerHTML = `${precip}`;
-  currentImage.innerHTML = `${icon}`;
+  currentImage.setAttribute =
+    ("src", `https://ssl.gstatic.com/onebox/weather/64/${icon}.png`);
+  currentImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
 function showTemperature(position) {
