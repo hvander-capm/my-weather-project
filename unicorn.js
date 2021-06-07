@@ -51,7 +51,7 @@ function locationTemp(response) {
   locHumidity.innerHTML = `${locHumid}%`;
   locPrecipitation.innerHTML = `${locPrecip}`;
   locImage.setAttribute =
-    ("src", `https://openweathermap.org/img/wn/04d@2x.png`);
+    ("src", `http://openweathermap.org/img/wn/10d@2x.png`);
   locImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
@@ -92,7 +92,7 @@ function currentTemp(response) {
   currentWind.innerHTML = `${wind}mph`;
   currentPrecipitation.innerHTML = `${precip}`;
   currentImage.setAttribute =
-    ("src", `https://openweathermap.org/img/wn/04d@2x.png`);
+    ("src", `http://openweathermap.org/img/wn/10d@2x.png`);
   currentImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
