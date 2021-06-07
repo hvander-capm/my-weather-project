@@ -34,7 +34,6 @@ function locationTemp(response) {
   let locWind = Math.round(response.data.wind.speed);
   let locHumid = response.data.main.humidity;
   let locPrecip = response.data.main.precipitation;
-  let locIcon = response.data.weather[0].icon;
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
@@ -52,8 +51,7 @@ function locationTemp(response) {
   locHumidity.innerHTML = `${locHumid}%`;
   locPrecipitation.innerHTML = `${locPrecip}`;
   locImage.setAttribute =
-    ("src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    ("src", `https://openweathermap.org/img/wn/04d@2x.png`);
   locImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
@@ -77,7 +75,6 @@ function currentTemp(response) {
   let city = response.data.name;
   let condition = response.data.weather[0].description;
   let precip = response.data.main.precipitation;
-  let icon = response.data.weather[0].icon;
   let currentLocation = document.querySelector("#currentLocation");
   let currentTemperature = document.querySelector("#temperature");
   let currentCondition = document.querySelector("#currentCondition");
