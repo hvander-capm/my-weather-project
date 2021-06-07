@@ -95,8 +95,7 @@ function currentTemp(response) {
   currentWind.innerHTML = `${wind}mph`;
   currentPrecipitation.innerHTML = `${precip}`;
   currentImage.setAttribute =
-    ("src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    ("src", `https://openweathermap.org/img/wn/04d@2x.png`);
   currentImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
