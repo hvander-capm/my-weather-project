@@ -31,15 +31,27 @@ function locationTemp(response) {
   let locTemp = Math.round(response.data.main.temp);
   let locCity = response.data.name;
   let locCond = response.data.weather[0].description;
+  let locWind = Math.round(response.data.wind.speed);
+  let locHumid = response.data.main.humidity;
+  let locPrecip = response.data.main.precipitation;
+  let locIcon = response.data.weather[0].icon;
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
+  let locWinds = document.querySelector("#wind");
+  let locHumidity = document.querySelector("#humidity");
+  let locPrecipitation = document.querySelector("#precipitation");
+  let locImage = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
   locLocation.innerHTML = `${locCity}`;
   locTemperature.innerHTML = `${locTemp}`;
   locCondition.innerHTML = `${locCond}`;
+  locWinds.innerHTML = `${locWind}mph`;
+  locHumidity.innerHTML = `${locHumid}%`;
+  locPrecipitation.innerHTML = `${locPrecip}`;
+  locImage.innerHTML = `${locIcon}`;
 }
 
 function showLocTemperature(position) {
@@ -61,11 +73,15 @@ function currentTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let condition = response.data.weather[0].description;
+  let precip = response.data.main.precipitation;
+  let icon = response.data.weather[0].icon;
   let currentLocation = document.querySelector("#currentLocation");
   let currentTemperature = document.querySelector("#temperature");
   let currentCondition = document.querySelector("#currentCondition");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
+  let currentPrecipitation = document.querySelector("#precipitation");
+  let currentImage = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
@@ -74,6 +90,8 @@ function currentTemp(response) {
   currentCondition.innerHTML = `${condition}`;
   currentHumidity.innerHTML = `${humid}%`;
   currentWind.innerHTML = `${wind}mph`;
+  currentPrecipitation.innerHTML = `${precip}`;
+  currentImage.innerHTML = `${icon}`;
 }
 
 function showTemperature(position) {
