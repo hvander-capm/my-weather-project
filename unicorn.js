@@ -33,13 +33,11 @@ function locationTemp(response) {
   let locCond = response.data.weather[0].description;
   let locWind = Math.round(response.data.wind.speed);
   let locHumid = response.data.main.humidity;
-  let locPrecip = response.data.main.precipitation;
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
   let locWinds = document.querySelector("#wind");
   let locHumidity = document.querySelector("#humidity");
-  let locPrecipitation = document.querySelector("#precipitation");
   let locImage = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
@@ -49,7 +47,6 @@ function locationTemp(response) {
   locCondition.innerHTML = `${locCond}`;
   locWinds.innerHTML = `${locWind}mph`;
   locHumidity.innerHTML = `${locHumid}%`;
-  locPrecipitation.innerHTML = `${locPrecip}`;
   locImage.setAttribute =
     ("src", `http://openweathermap.org/img/wn/10d@2x.png`);
   locImage.setAttribute = ("alt", response.data.weather[0].description);
@@ -74,13 +71,11 @@ function currentTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let condition = response.data.weather[0].description;
-  let precip = response.data.main.precipitation;
   let currentLocation = document.querySelector("#currentLocation");
   let currentTemperature = document.querySelector("#temperature");
   let currentCondition = document.querySelector("#currentCondition");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
-  let currentPrecipitation = document.querySelector("#precipitation");
   let currentImage = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
@@ -90,7 +85,6 @@ function currentTemp(response) {
   currentCondition.innerHTML = `${condition}`;
   currentHumidity.innerHTML = `${humid}%`;
   currentWind.innerHTML = `${wind}mph`;
-  currentPrecipitation.innerHTML = `${precip}`;
   currentImage.setAttribute =
     ("src", `http://openweathermap.org/img/wn/10d@2x.png`);
   currentImage.setAttribute = ("alt", response.data.weather[0].description);
