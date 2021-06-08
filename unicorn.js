@@ -88,6 +88,7 @@ function currentTemp(response) {
   currentImage.setAttribute =
     ("src", `http://openweathermap.org/img/wn/10d@2x.png`);
   currentImage.setAttribute = ("alt", response.data.weather[0].description);
+  console.log(response.data.weather[0].description);
 }
 
 function showTemperature(position) {
