@@ -20,6 +20,7 @@ function localTime() {
     "Saturday",
   ];
   let day = days[dayData];
+
   return `${day}, ${hour}:${minutes}`;
 }
 let crtTime = document.querySelector("#currentTime");
