@@ -34,11 +34,6 @@ function locationTemp(response) {
   let locWind = Math.round(response.data.wind.speed);
   let locHumid = response.data.main.humidity;
   let locPrecip = response.data.precipitation.mode;
-  if (response.data.precipitation.mode === "no") {
-    ("None");
-  } else {
-    ("☔");
-  }
   let locLocation = document.querySelector("#currentLocation");
   let locTemperature = document.querySelector("#temperature");
   let locCondition = document.querySelector("#currentCondition");
@@ -81,11 +76,6 @@ function currentTemp(response) {
   let city = response.data.name;
   let condition = response.data.weather[0].description;
   let precipitation = response.data.precipitation.mode;
-  if (response.data.precipitation.mode === "no") {
-    ("None");
-  } else {
-    ("☔");
-  }
   let currentLocation = document.querySelector("#currentLocation");
   let currentTemperature = document.querySelector("#temperature");
   let currentCondition = document.querySelector("#currentCondition");
