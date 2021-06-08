@@ -33,9 +33,9 @@ function locationTemp(response) {
   let locCond = response.data.weather[0].description;
   let locWind = Math.round(response.data.wind.speed);
   let locHumid = response.data.main.humidity;
-  let locPrecip = response.data.precipitation;
-  if (response.data.precipitation === "undefined") {
-    ("N/A");
+  let locPrecip = response.data.precipitation.mode;
+  if (response.data.precipitation.mode === "no") {
+    ("None");
   } else {
     ("☔");
   }
@@ -80,8 +80,8 @@ function currentTemp(response) {
   let wind = Math.round(response.data.wind.speed);
   let city = response.data.name;
   let condition = response.data.weather[0].description;
-  let precipitation = response.data.precipitation;
-  if (response.data.precipitation === "undefined") {
+  let precipitation = response.data.precipitation.mode;
+  if (response.data.precipitation.mode === "no") {
     ("None");
   } else {
     ("☔");
