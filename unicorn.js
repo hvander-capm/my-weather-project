@@ -38,7 +38,7 @@ function locationTemp(response) {
   let locCondition = document.querySelector("#currentCondition");
   let locWinds = document.querySelector("#wind");
   let locHumidity = document.querySelector("#humidity");
-  let locImage = document.querySelector("#icon");
+  let locElement = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
@@ -47,7 +47,7 @@ function locationTemp(response) {
   locCondition.innerHTML = `${locCond}`;
   locWinds.innerHTML = `${locWind}mph`;
   locHumidity.innerHTML = `${locHumid}%`;
-  locImage.setAttribute(
+  locElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
@@ -77,7 +77,7 @@ function currentTemp(response) {
   let currentCondition = document.querySelector("#currentCondition");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
-  let currentImage = document.querySelector("#icon");
+  let currentElement = document.querySelector("#icon");
 
   fahrenheittemp = Math.round(response.data.main.temp);
 
@@ -86,7 +86,7 @@ function currentTemp(response) {
   currentCondition.innerHTML = `${condition}`;
   currentHumidity.innerHTML = `${humid}%`;
   currentWind.innerHTML = `${wind}mph`;
-  currentImage.setAttribute(
+  currentElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
