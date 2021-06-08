@@ -22,7 +22,6 @@ function localTime() {
   let day = days[dayData];
   return `${day}, ${hour}:${minutes}`;
 }
-
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
