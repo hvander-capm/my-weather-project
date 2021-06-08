@@ -1,6 +1,6 @@
 // Current Local Time
-function localTime(timestamp) {
-  let now = new Date(timestamp);
+function localTime() {
+  let now = new Date();
   let dayData = now.getDay();
   let hour = now.getHours();
   if (hour < 10) {
