@@ -50,7 +50,6 @@ function locationTemp(response) {
   locImage.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  locImage.setAttribute = ("alt", response.data.weather[0].description);
 }
 
 function showLocTemperature(position) {
@@ -89,8 +88,6 @@ function currentTemp(response) {
   currentImage.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  currentImage.setAttribute = ("alt", response.data.weather[0].description);
-  console.log(response.data.weather[0].description);
 }
 
 function showTemperature(position) {
