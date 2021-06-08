@@ -1,6 +1,6 @@
 // Current Local Time
-function localTime() {
-  let now = new Date();
+function localTime(timestamp) {
+  let now = new Date(timestamp);
   let dayData = now.getDay();
   let hour = now.getHours();
   if (hour < 10) {
@@ -20,9 +20,15 @@ function localTime() {
     "Saturday",
   ];
   let day = days[dayData];
-
   return `${day}, ${hour}:${minutes}`;
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+}
+
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
