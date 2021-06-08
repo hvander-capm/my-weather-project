@@ -1,6 +1,6 @@
 // Current Local Time
 function localTime(timestamp) {
-  let now = new Date(timestamp);
+  let now = new Date(timestamp * 1000);
   let dayData = now.getDay();
   let hour = now.getHours();
   if (hour < 10) {
@@ -21,12 +21,6 @@ function localTime(timestamp) {
   ];
   let day = days[dayData];
   return `${day}, ${hour}:${minutes}`;
-}
-
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 }
 
 let crtTime = document.querySelector("#currentTime");
@@ -55,7 +49,7 @@ function locationTemp(response) {
   locHumidity.innerHTML = `${locHumid}%`;
   locElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
@@ -94,7 +88,7 @@ function currentTemp(response) {
   currentWind.innerHTML = `${wind}mph`;
   currentElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
