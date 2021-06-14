@@ -26,6 +26,37 @@ function localTime() {
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
+//loop forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="row fiveDays">
+            <div class="col">
+              <div>
+                <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Weather"
+                id="tuesday"
+              />
+              </div>
+              ${day}
+              <br />
+              <span class= "forecast-weather"> Sunny,</span>
+              <span class="forecast-temp"> 75℉ </span>
+            </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
   let locTemp = Math.round(response.data.main.temp);
