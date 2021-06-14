@@ -28,7 +28,7 @@ crtTime.innerHTML = localTime();
 
 //loop forecast
 function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.querySelector("#row-fiveDays");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
 
