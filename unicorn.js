@@ -28,29 +28,26 @@ crtTime.innerHTML = localTime();
 
 //loop forecast
 function displayForecast() {
-  let forecastElement = document.querySelector("#row-fiveDays");
+  let forecastElement = document.querySelector("#fiveDays");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
-      <div class="row fiveDays">
             <div class="col">
               <div>
                 <img
                 src="https://openweathermap.org/img/wn/10d@2x.png"
                 alt="Weather"
-                id="tuesday"
               />
               </div>
               ${day}
               <br />
               <span class= "forecast-weather"> Sunny,</span>
               <span class="forecast-temp"> 75℉ </span>
-            </div>
   `;
   });
   forecastHTML = forecastHTML + `</div>`;
