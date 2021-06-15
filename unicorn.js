@@ -164,23 +164,4 @@ function getCurrentPosition() {
 let button = document.querySelector("#currentBtn");
 button.addEventListener("click", getCurrentPosition);
 
-//Different Temp links
-function changeTempF(event) {
-  event.preventDefault();
-  let tempF = document.querySelector("#temperature");
-  tempF.innerHTML = Math.round(fahrenheittemp);
-}
-let alternateTempF = document.querySelector("#fahrenheit-link");
-alternateTempF.addEventListener("click", changeTempF);
-
-function changeTempC(event) {
-  event.preventDefault();
-  let tempC = document.querySelector("#temperature");
-  let celsiustemp = Math.round(((fahrenheittemp - 32) * 5) / 9);
-
-  tempC.innerHTML = celsiustemp;
-}
-let alternateTempC = document.querySelector("#celsius-link");
-alternateTempC.addEventListener("click", changeTempC);
-
 let fahrenheittemp = null;
