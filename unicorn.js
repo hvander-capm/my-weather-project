@@ -57,9 +57,7 @@ function displayForecast(response) {
         </div>
         <div class="weather-date"> ${formatDay(forecastDay.dt)}</div>
         <br />
-        <span class= weather-description> ${
-          forecastDay.weather[0].main
-        }, </span>
+        <div class= weather-description> ${forecastDay.weather[0].main}, </div>
         <span class= weather-temp> ${Math.round(forecastDay.temp.max)}℉ </span>
         <span class= weather-temp> ${Math.round(forecastDay.temp.min)}℉ </span>
       </div>  
