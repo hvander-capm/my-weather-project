@@ -30,25 +30,23 @@ crtTime.innerHTML = localTime();
 function displayForecast() {
   let forecastElement = document.querySelector("#fiveDays");
 
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
-
   let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
       <div class="col">
-              <div>
-                <img
-                  src="https://openweathermap.org/img/wn/10d@2x.png"
-                  alt="Weather"
-                  id="thursday"
-                />
-              </div>
-              Thursday
-              <br />
-              Cloudy, 65℉
-            </div>  
+        <div>
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt="Weather"
+            />
+        </div>
+        <div class="weather-date"> ${day} </div>
+        <br />
+        Cloudy, 65℉
+      </div>  
   `;
   });
 
@@ -56,8 +54,6 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
-
-displayForecast();
 
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
@@ -160,3 +156,4 @@ let alternateTempC = document.querySelector("#celsius-link");
 alternateTempC.addEventListener("click", changeTempC);
 
 let fahrenheittemp = null;
+displayForecast();
