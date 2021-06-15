@@ -37,21 +37,22 @@ function displayForecast() {
     forecastHTML =
       forecastHTML +
       `
-            <div class="col">
-              <div>
-                <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="Weather"
-              />
-              </div>
-              <div class="weather-forecast-date">${day}</div>
-              <span class= "forecast-weather"> Sunny,</span>
-              <span class="forecast-temp"> 75℉ </span>
-            </div>  
+      <div class="col">
+        <div>
+          <img
+            src="https://openweathermap.org/img/wn/10d@2x.png"
+            alt="Weather"
+          />
+        </div>
+        <div class="weather-forecast-date">${day}</div>
+        <span class= "forecast-weather"> Sunny,</span>
+        <span class="forecast-temp"> 75℉ </span>
+      </div>  
   `;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 //Below here is for SEARCH BUTTON
@@ -155,3 +156,4 @@ let alternateTempC = document.querySelector("#celsius-link");
 alternateTempC.addEventListener("click", changeTempC);
 
 let fahrenheittemp = null;
+displayForecast();
