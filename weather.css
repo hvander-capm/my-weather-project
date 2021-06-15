@@ -33,7 +33,9 @@
 .btn :hover {
   background-color: aquamarine;
 }
-
+.temperature {
+  font-size: 20px;
+}
 .currentDay {
   text-transform: capitalize;
   font-size: 20px;
