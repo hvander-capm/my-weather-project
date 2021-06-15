@@ -26,29 +26,43 @@ function localTime() {
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 //loop forecast
 function displayForecast(response) {
-  console.log(displayForecast);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#fiveDays");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  days.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="col">
         <div>
           <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
+            src="https://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
             alt="Weather"
             />
         </div>
-        <div class="weather-date"> ${day} </div>
+        <div class="weather-date"> ${formatDay(forecastDay.dt)}</div>
         <br />
-        Cloudy, 65℉
+        <span class= weather-description> ${forecastDay.weather.main}, </span>
+        <span class= weather-temp> ${Math.round(forecastDay.temp.max)}℉ </span>
+        <span class= weather-temp> ${Math.round(forecastDay.temp.min)}℉ </span>
       </div>  
   `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
