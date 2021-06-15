@@ -46,14 +46,17 @@ function displayForecast() {
         </div>
         <div class="weather-forecast-date">${day}</div>
         <span class= "forecast-weather"> Sunny,</span>
-        <span class="forecast-temp"> 75℉ </span>
+        <span class= "forecast-temp"> 75℉ </span>
       </div>  
   `;
   });
+
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
+
+displayForecast();
 
 //Below here is for SEARCH BUTTON
 function locationTemp(response) {
@@ -156,4 +159,3 @@ let alternateTempC = document.querySelector("#celsius-link");
 alternateTempC.addEventListener("click", changeTempC);
 
 let fahrenheittemp = null;
-displayForecast();
