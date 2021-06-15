@@ -23,9 +23,6 @@
   font-size: 20px;
   padding: 20px;
 }
-.emojis {
-  font-size: 50px;
-}
 .btn {
   display: block;
   background-color: #ffff;
@@ -52,7 +49,7 @@
   text-align: left;
 }
 .addtInfo {
-  text-align: right;
+  text-align: left;
   max-width: 200px;
 }
 .form-text {
