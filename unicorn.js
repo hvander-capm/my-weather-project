@@ -44,10 +44,10 @@ function displayForecast() {
                 alt="Weather"
               />
               </div>
-              ${day}
-              <br />
+              <div class="weather-forecast-date">${day}</div>
               <span class= "forecast-weather"> Sunny,</span>
               <span class="forecast-temp"> 75℉ </span>
+            </div>  
   `;
   });
   forecastHTML = forecastHTML + `</div>`;
