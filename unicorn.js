@@ -26,14 +26,6 @@ function localTime() {
 let crtTime = document.querySelector("#currentTime");
 crtTime.innerHTML = localTime();
 
-//Forecast API
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "ab981aa80d2e4a4a97fc25e69e3949d5";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=ab981aa80d2e4a4a97fc25e69e3949d5&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
 //loop forecast
 function displayForecast(response) {
   console.log(displayForecast);
@@ -62,6 +54,14 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
+}
+
+//Forecast API
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ab981aa80d2e4a4a97fc25e69e3949d5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=ab981aa80d2e4a4a97fc25e69e3949d5&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Below here is for SEARCH BUTTON
@@ -130,6 +130,7 @@ function currentTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 
 function showTemperature(position) {
