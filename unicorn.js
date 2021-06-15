@@ -38,16 +38,17 @@ function displayForecast() {
       forecastHTML +
       `
       <div class="col">
-        <div>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="Weather"
-          />
-        </div>
-        <div class="weather-forecast-date">${day}</div>
-        <span class= "forecast-weather"> Sunny,</span>
-        <span class= "forecast-temp"> 75℉ </span>
-      </div>  
+              <div>
+                <img
+                  src="https://openweathermap.org/img/wn/10d@2x.png"
+                  alt="Weather"
+                  id="thursday"
+                />
+              </div>
+              Thursday
+              <br />
+              Cloudy, 65℉
+            </div>  
   `;
   });
 
